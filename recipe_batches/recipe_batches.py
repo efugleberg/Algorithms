@@ -8,7 +8,7 @@ def recipe_batches(recipe, ingredients):
     min = 0
 
     if len(recipe) != len(ingredients):
-        return 0
+        return min
 
     else:
         for item in recipe:
@@ -16,10 +16,7 @@ def recipe_batches(recipe, ingredients):
 
         totals.sort()
 
-        if len(totals) == 0:
-            return min
-        else:
-            return totals[0]
+    return totals[0]
 
 
 if __name__ == '__main__':
